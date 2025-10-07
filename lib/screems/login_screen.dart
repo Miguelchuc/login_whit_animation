@@ -11,12 +11,34 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   bool _obscurePassword = true; // Al inicio la contraseña está oculta
 
-  //Cerebro de la lógica de las animaciones del osito
+  //Cerebro de la lógica de las animaciones (SMI: State Machine Input)
   StateMachineController? controller;
   SMIBool? isChecking; //Activa el modo chismoso
   SMIBool? isHandsUp; //Se tapa los ojos
   SMITrigger? trigSuccess; //Se emociona
   SMITrigger? trigFail; //Se pone sad
+
+  //1) FocusNode
+  final emailFocus = FocusNode();
+  final passwordFocus = FocusNode();
+  //2) Listener
+  @override
+  void initState() {
+    super.initState();
+    emailFocus.addListener(() {
+      if (emailFocus.hasFocus) {
+        //No tapar los ojos al escribir email
+        isHandsUp?.change(false);
+      }
+    });
+    passwordFocus.addListener(() {
+      isHandsUp?.change(passwordFocus.hasFocus);
+      {
+        //Si tiene el foco, se tapa los ojos
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     //Para obtener el tamaño de la pantalla del dispositivo
@@ -35,7 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: RiveAnimation.asset(
                   'assets/animated_login_character.riv',
                   stateMachines: ["Login Machine"],
-                  //Al iniciarse iniciara las aimaciones del oso
+                  //Al iniciarse
                   onInit: (artboard) {
                     controller = StateMachineController.fromArtboard(
                       artboard,
@@ -43,12 +65,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     );
                     if (controller == null) return;
                     artboard.addController(controller!);
-                    isChecking = controller!.findSMI<SMIBool>('isChecking');
-                    isHandsUp = controller!.findSMI<SMIBool>('isHandsUp');
-                    trigSuccess = controller!.findSMI<SMITrigger>(
-                      'trigSuccess',
-                    );
-                    trigFail = controller!.findSMI<SMITrigger>('trigFail');
+                    isChecking = controller!.findSMI('isChecking');
+                    isHandsUp = controller!.findSMI('isHandsUp');
+                    trigSuccess = controller!.findSMI('trigSuccess');
+                    trigFail = controller!.findSMI('trigFail');
                   },
                 ),
               ),
@@ -56,6 +76,8 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(height: 10),
               //Campo de texto del email
               TextField(
+                focusNode: emailFocus,
+                //asignas el focus nodo al texfield
                 onChanged: (value) {
                   if (isHandsUp != null) {
                     //No tapar los ojos al escribir email
@@ -79,13 +101,15 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(height: 10),
               //Campo de texto del password
               TextField(
+                focusNode: passwordFocus,
+                //asignas el focus nodo al texfield
                 onChanged: (value) {
                   if (isChecking != null) {
-                    //No activar el modo chismoso al escribir la contraseña
+                    //No tapar los ojos al escribir email
                     isChecking!.change(false);
                   }
                   if (isHandsUp == null) return;
-                  //cierra los ojos al escribir la contraseña
+                  //Activa el modo chismoso
                   isHandsUp!.change(true);
                 },
                 obscureText: _obscurePassword,
@@ -160,5 +184,13 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    //3) Dispose
+    emailFocus.dispose();
+    passwordFocus.dispose();
+    super.dispose();
   }
 }
