@@ -153,7 +153,7 @@ Together, these make animations **intelligent, adaptive, and engaging** — resp
 </p>
 
 <p align="center">
-  <img src="assets/gifosito.gif" alt="Login Animation Demo" width="480" style="border-radius:10px;"/>
+  <img src="assets/gifosito ‐ Hecho con Clipchamp.gif" alt="Login Animation Demo" width="480" style="border-radius:10px;"/>
 </p>
 
 ---
