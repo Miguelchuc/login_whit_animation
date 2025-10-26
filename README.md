@@ -131,69 +131,64 @@ Together, these make animations **intelligent, adaptive, and engaging** — resp
 
 <p align="center">
   <em>
-    🧠 This structure ensures modularity, reusability, and seamless integration between Flutter and Rive.
+    🌐 This structure guarantees modularity, flexibility, and a smooth integration between <strong>Flutter</strong> and <strong>Rive</strong>, ensuring a professional and scalable project base.
   </em>
 </p>
 
 ---
 
-<h2 align="center">🎬 Project Demo</h2>
+<h2 align="center">🚀 PROJECT DEMO</h2>
 
 <p align="center">
   <em>
-    The animated character reacts in real time as you type your email, covers its eyes while entering the password,
-    and shows success or error animations based on login results.
+    💡 Experience a responsive and interactive login animation — the character reacts in real time to your input, covering its eyes during password entry and showing success or error reactions based on your credentials.
   </em>
 </p>
 
 ---
 
 <p align="center">
-  <em>👇 Watch the full login animation in action 👇</em>
+  <em>🎥 See the full login animation in action below 👇</em>
 </p>
 
 <p align="center">
-  <img src="assets/gifosito ‐ Hecho con Clipchamp.gif" alt="Login Animation Demo" width="480" style="border-radius:10px;"/>
+  <img src="assets/gifosito ‐ Hecho con Clipchamp.gif" alt="Login Animation Demo" width="480" style="border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.25);"/>
 </p>
 
 ---
 
-<h2 align="center">📘 Academic Information</h2>
+<h2 align="center">🎓 ACADEMIC INFORMATION</h2>
 
 ---
 
 <p align="center">
   <table>
-    <tr><td>📚 <strong>Course:</strong></td><td>Computer Graphics</td></tr>
-    <tr><td>👨‍🏫 <strong>Instructor:</strong></td><td>Rodrigo Fidel Gaxiola Sosa</td></tr>
-    <tr><td>🧑‍💻 <strong>Student:</strong></td><td>Luis Angel Santamaria Aguayo</td></tr>
-    <tr><td>🏫 <strong>Institution:</strong></td><td>Instituto Tecnológico de Mérida</td></tr>
+    <tr><td>📘 <strong>Course:</strong></td><td>Computer Graphics</td></tr>
+    <tr><td>🧑‍🏫 <strong>Instructor:</strong></td><td>Rodrigo Fidel Gaxiola Sosa</td></tr>
+    <tr><td>👨‍💻 <strong>Student:</strong></td><td>Miguel Antonio Chuc Ek</td></tr>
+    <tr><td>🏛️ <strong>Institution:</strong></td><td>Instituto Tecnológico Campus Mérida</td></tr>
   </table>
 </p>
 
 ---
 
 <p align="center">
-  <em>🎓 Developed as part of the Computer Graphics course at the Instituto Tecnológico de Mérida.</em>
+  <em>🎯 This project was developed as part of the <strong>Computer Graphics</strong> course at the Instituto Tecnológico de Mérida.</em>
 </p>
 
 ---
 
-<h2 align="center">🙌 Credits</h2>
+<h2 align="center">💡 CREDITS & RECOGNITION</h2>
 
 ---
 
 <p align="center">
-  🧸 <strong>Original Animation:</strong> 
+  🦊 <strong>Original Animation:</strong> 
   <a href="https://rive.app/marketplace/3645-7621-remix-of-login-machine/" target="_blank">
     Remix of Login Machine – Rive
   </a>
   <br><br>
-  💻 <strong>Project Developed For:</strong> Computer Graphics Course, Instituto Tecnológico de Mérida
-</p>
-
----
-
-<p align="center">
-  <em>✨ Made with ❤️ using Flutter and Rive ✨</em>
+  💻 <strong>Project Purpose:</strong> Academic project for the Computer Graphics Course, Instituto Tecnológico de Mérida
+  <br><br>
+  ✨ <em>Created with passion using Flutter, Dart, and Rive ✨</em>
 </p>
